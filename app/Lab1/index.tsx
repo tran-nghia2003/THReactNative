@@ -1,4 +1,3 @@
-// app/Lab1/index.tsx
 import { View, Text, Pressable, ScrollView } from "react-native";
 import { Link } from "expo-router";
 
@@ -26,6 +25,21 @@ export default function Lab1Screen() {
           </Pressable>
         </Link>
       ))}
+
+      {/* 🔗 Thêm liên kết đến Calculator */}
+      <Link href="/Lab1_phan2/Calculator" asChild>
+        <Pressable
+          style={{
+            padding: 12,
+            backgroundColor: "#f6ad55",
+            marginBottom: 12,
+            borderRadius: 8,
+            alignItems: "center",
+          }}
+        >
+          <Text style={{ fontSize: 16, color: "#fff" }}>Mở Calculator</Text>
+        </Pressable>
+      </Link>
     </ScrollView>
   );
 }
